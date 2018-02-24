@@ -87301,3 +87301,11 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
+  - time: 0
+    functionName: PlaySound
+    data: 
+    objectReferenceParameter: {fileID: 8300000, guid: 93f0657c76447c241b10004cf15382af,
+      type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

@@ -6,6 +6,7 @@ public class RobotController : MonoBehaviour {
 
 	[SerializeField] private Animator RobotAnimator;
 	[SerializeField] private ActionState[] sequencing;
+	[SerializeField] private AudioSource RobotAS,LoopAS;
 	public int CurAction = -1;
 	private ActionState robotState;
 	public enum ActionState {
@@ -58,6 +59,7 @@ public class RobotController : MonoBehaviour {
 		
 	public void ShowRobot(){
 		ChangeActionState ();
+		LoopAS.Play();
 	}
 
 	public void ChangeActionState(){
@@ -68,6 +70,11 @@ public class RobotController : MonoBehaviour {
 
 		}
 
+	}
+
+	public void PlaySound(AudioClip clip)
+	{
+		RobotAS.PlayOneShot(clip);
 	}
 
 
