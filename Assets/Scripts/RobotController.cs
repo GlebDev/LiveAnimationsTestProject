@@ -7,7 +7,8 @@ public class RobotController : MonoBehaviour {
 	[SerializeField] private Animator RobotAnimator;
 	[SerializeField] private ActionState[] sequencing;
 	[SerializeField] private AudioSource RobotAS,LoopAS;
-	public int CurAction = -1;
+	[SerializeField] private GameObject PlayButton;
+	private int CurAction = -1;
 	private ActionState robotState;
 	public enum ActionState {
 		None,
@@ -58,6 +59,7 @@ public class RobotController : MonoBehaviour {
 	}
 		
 	public void ShowRobot(){
+		PlayButton.SetActive (false);
 		ChangeActionState ();
 		LoopAS.Play();
 	}
